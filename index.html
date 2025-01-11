@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/untitled-2" />
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script type="module">
+        // Stap 1: zoek de input en stop die in een variabele
+        let inputElement = document.querySelector('input');
+        
+        // Stap 2: luister naar het invalid event, en wacht tot dat afgevuurd wordt..
+        inputElement.addEventListener('invalid', function(ev) {
+        
+          // Stap 3: pas de tekst in de validatiemelding aan
+          inputElement.setCustomValidity('Dit veld mag niet leeg zijn hoor..');
+        
+        });
+        </script>
+
+<style>
+    fieldset:has(:user-invalid) {
+      background: #faa;
+    }
+
+    ul.menu li:has(a.active) > a {
+    font-weight: bold;
+    color: #3498db; /* Blauwe kleur voor actieve menu-items */
+}
+
+  
+    
+    </style>
+
+
+
+<ul class="menu">
+    <li>
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#">Diensten</a>
+      <ul>
+        <li><a href="#" class="active">Webdesign</a></li>
+        <li><a href="#">Marketing</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+  
+
+
+    <form>
+        <fieldset>
+          <legend>Zoeken</legend>
+          <input required>
+          <button type="submit">Zoek!</button>
+        </fieldset>
+      </form>
+
+
+
+
+
+    
+</body>
+</html>
